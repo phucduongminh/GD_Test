@@ -9,18 +9,15 @@ function dropDown($){
     const dropdown = get('#right-sidebar')
     var linkfile;
    const param = '?key=${btoa(key)}'
-   linkfile ='https://faiezwaseem.github.io/Google-Drive-Clone/fileSharing/' + param
-    dropdown.style.display = 'flex'
+   //linkfile ='https://raw.githack.com/phucduongminh/GD_Test/main/fileSharing/index.html' + param
+   linkfile ='https://faiezwaseem.github.io/Google-Drive-Clone/fileSharing/' + param 
+   dropdown.style.display = 'flex'
     get('#button-Delete').setAttribute("data-id", key);
     get('#date').textContent = date
     get('#size').textContent = size
     get('#button-download').onclick= ()=>{
         let a = document.createElement('a')
-            let str = link;
-            str =  str.replace("https://drive.google.com/uc?export=download&id=" , "") //dowload from ID
-            str = str.replace(/\s/g, '');
-            str =  'https://www.googleapis.com/drive/v3/files/${str}?alt=media&key=AIzaSyAHIDPKFSVbDwk-NdlAW8n3uh2q6AJkyAA'
-             a.href = str
+            a.href = link
             a.click();
     }
     get('#view').setAttribute("data-id", key);

@@ -352,6 +352,7 @@ function DeleteFolder(folder){
 function CopyFolderLink(folder){
     const key = folder.getAttribute('data-id');
     const param = `?folder=${btoa(key)}`
+    //linkfile ='https://raw.githack.com/phucduongminh/GD_Test/main/fileSharing/index.html' + param
     linkfile ='https://faiezwaseem.github.io/Google-Drive-Clone/fileSharing/' + param
     copytext(linkfile);
 }
@@ -411,11 +412,7 @@ function DownloadMultipleFile(){
     checkedbox.forEach((checkbox) =>{
         window.setTimeout(function(){
             let a = document.createElement('a')
-            let str = checkbox.getAttribute('link')
-            str =  str.replace("https://drive.google.com/uc?export=download&id=" , "")
-            str = str.replace(/\s/g, '');
-            str =  `https://www.googleapis.com/drive/v3/files/${str}?alt=media&key=AIzaSyAHIDPKFSVbDwk-NdlAW8n3uh2q6AJkyAA`
-            a.href = str
+            a.href = checkbox.getAttribute('link')
             a.click();
         },500)
     })

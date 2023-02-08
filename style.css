@@ -441,8 +441,12 @@ cursor: pointer;
       padding: .4rem !important;
     }
 }
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
 /* Dark Mode */
-/* :root{
+:root{
   --primary-color: #2c2c2c;
   --color-body: #494242;
   --color-text: #f3f3f3;
@@ -498,6 +502,7 @@ cursor: pointer;
   color: var(--color-text) !important;
   transition: all 1s ease-in;
 }
+
 .switch {
   position: relative;
   display: inline-block;
@@ -547,7 +552,7 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-}*/
+}
 
 /* Rounded sliders */
 .slider.round {
