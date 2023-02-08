@@ -82,7 +82,7 @@ console.error(err)
 function video(title , link , key , date , share, size){
     var link2 = link.replace('https://drive.google.com/uc?export=download&id=', "")
     const id = link2.replace(/\s/g, '')
-    link2 = `https://www.googleapis.com/drive/v3/files/${id}?alt=media&key=AIzaSyAHIDPKFSVbDwk-NdlAW8n3uh2q6AJkyAA`;
+    link2 = `https://www.googleapis.com/drive/v3/files/${id}?alt=media&key=AIzaSyCpdoMyef5cgIQ5EmcoPJLgsvkXl3uytqo`;
     var html;
     try{ html = `
     <div class="card mr-4 ${key}" size="${size}" date="${date}" share=${share} style="width: 28%; height: 14rem" id="${key}" title="${title}" key="${key}" link="${btoa(link)}" onclick="dropDown(this)" >
@@ -352,8 +352,7 @@ function DeleteFolder(folder){
 function CopyFolderLink(folder){
     const key = folder.getAttribute('data-id');
     const param = `?folder=${btoa(key)}`
-    //linkfile ='https://raw.githack.com/phucduongminh/GD_Test/main/fileSharing/index.html' + param
-    linkfile ='https://faiezwaseem.github.io/Google-Drive-Clone/fileSharing/' + param
+    linkfile ='https://raw.githack.com/phucduongminh/GD_Test/main/fileSharing/index.html' + param
     copytext(linkfile);
 }
 function RemoveFolderSharing(id){

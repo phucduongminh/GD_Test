@@ -139,7 +139,7 @@ firebase.database().ref(`sharing/${key}`).once('value').then(function (snapshot)
                 var link2 = link.replace('https://drive.google.com/uc?export=download&id=', "")
                 link2 = link2.replace(/\s/g, '')
                 const vid_key = link2
-                link2 =  `https://www.googleapis.com/drive/v3/files/${vid_key}?alt=media&key=AIzaSyAHIDPKFSVbDwk-NdlAW8n3uh2q6AJkyAA`
+                link2 =  `https://www.googleapis.com/drive/v3/files/${vid_key}?alt=media&key=AIzaSyCpdoMyef5cgIQ5EmcoPJLgsvkXl3uytqo`
                  main.innerHTML = extra.video(vid_key , link2)
         
              }else{

@@ -1,4 +1,3 @@
-
 function dropDown($){
     const key = $.getAttribute('key')
     const link = atob($.getAttribute('link'))
@@ -8,10 +7,9 @@ function dropDown($){
     const size = $.getAttribute('size')
     const dropdown = get('#right-sidebar')
     var linkfile;
-   const param = '?key=${btoa(key)}'
-   //linkfile ='https://raw.githack.com/phucduongminh/GD_Test/main/fileSharing/index.html' + param
-   linkfile ='https://faiezwaseem.github.io/Google-Drive-Clone/fileSharing/' + param 
-   dropdown.style.display = 'flex'
+   const param = `?key=${btoa(key)}`
+   linkfile ='https://raw.githack.com/phucduongminh/GD_Test/main/fileSharing/index.html' + param
+    dropdown.style.display = 'flex'
     get('#button-Delete').setAttribute("data-id", key);
     get('#date').textContent = date
     get('#size').textContent = size
@@ -23,12 +21,12 @@ function dropDown($){
     get('#view').setAttribute("data-id", key);
     get('#title-option').textContent = title ;
    get('#button-copy').onclick=() => { copytext(linkfile) };
-   if(share == 'false'){
-    get('#view').checked = false
+   if(get('#view').checked = false){
+    //get('#view').checked = false
     get(`.${key}`).setAttribute('share','false')
 }else{
+    //get('#view').checked = true
     get(`.${key}`).setAttribute('share','true')
-       get('#view').checked = true
    }
 
 }
@@ -130,29 +128,29 @@ function openNav() {
 
   }
   }
-  get('#nav-close').onclick = () =>{
-      if(_x == 0){
-          _x = 1;
-      }else{
-          _x = 0;
-      }
-    document.getElementById("left").classList.remove("col-2");
-    document.getElementById("left").classList.remove("p-4");
-    document.getElementById("left").style.width = '0px'
-  }
+get('#nav-close').onclick = () =>{
+    if(_x == 0){
+        _x = 1;
+    }else{
+        _x = 0;
+    }
+  document.getElementById("left").classList.remove("col-2");
+  document.getElementById("left").classList.remove("p-4");
+  document.getElementById("left").style.width = '0px'
+}
 
- window.addEventListener('resize' , function(e){
-     if(e.currentTarget.innerWidth > 768){
-    document.getElementById("left").style.width = ''
-    document.getElementById("left").classList.add("col-2");
-    document.getElementById("left").classList.add("p-4");
-    
-  }else if(e.currentTarget.innerWidth < 768){
-    document.getElementById("left").classList.remove("col-2");
-    document.getElementById("left").classList.remove("p-4");
-    document.getElementById("left").style.width = '0px'
-  }
- }) 
+window.addEventListener('resize' , function(e){
+   if(e.currentTarget.innerWidth > 768){
+  document.getElementById("left").style.width = ''
+  document.getElementById("left").classList.add("col-2");
+  document.getElementById("left").classList.add("p-4");
+  
+}else if(e.currentTarget.innerWidth < 768){
+  document.getElementById("left").classList.remove("col-2");
+  document.getElementById("left").classList.remove("p-4");
+  document.getElementById("left").style.width = '0px'
+}
+})
  function FileSize(size) {
     var $_i = Math.floor( Math.log(size) / Math.log(1024) );
    return ( size / Math.pow(1024, $_i) ).toFixed(2) * 1 + ' ' + ['B', 'kB', 'MB', 'GB', 'TB'][$_i];
@@ -168,9 +166,9 @@ function openNav() {
     return resultCopy;
   }
   //Function SignOut
-get('.fa-sign-out-alt').onclick=()=>{
-      auth.signOut();
-  }
+  get('.fa-sign-out-alt').onclick=()=>{
+    auth.signOut();
+}
   //File Side bar CLose 
   get('#sidebar-close').onclick=()=>{
       get('#right-sidebar').style.display = 'none'
