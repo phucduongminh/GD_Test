@@ -85,7 +85,7 @@ function video(title , link , key , date , share, size){
     link2 = `https://www.googleapis.com/drive/v3/files/${id}?alt=media&key=AIzaSyCpdoMyef5cgIQ5EmcoPJLgsvkXl3uytqo`;
     var html;
     try{ html = `
-    <div class="card mr-4 ${key}" size="${size}" date="${date}" share=${share} style="width: 28%; height: 14rem" id="${key}" title="${title}" key="${key}" link="${btoa(link)}" onclick="dropDown(this)" >
+    <div class="card mr-4 ${key}" size="${size}" date="${date}" share=${share} style="width: 28%" id="${key}" title="${title}" key="${key}" link="${btoa(link)}" onclick="dropDown(this)" >
     <video class="card-img-top" poster="https://drive.google.com/thumbnail?id=${id}" src="${btoa(link)}" controls></video>
     <div class="card-body">
     <h5 class="card-title mb-0 file" data-id="${key}"><i class="fas fa-image mr-4"></i>${title}</h5>                           
