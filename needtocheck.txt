@@ -1,29 +1,8 @@
-https://www.youtube.com/watch?v=u0V3jjUuMZM 3:58:00 4:12:12 4:26:47
+edit multiple dowload
 
-./src/E-Admin/main.js
-not check 
+edit UI Folder
 
-./js/auth.js
-avatar
-not check
-
-./js/components.js
-not check
-
-./js/config.js
-not check
-
-Dark mode
-not check
-
-./js/longpress.min.js
-js nay co tac dung gi?
-not check
-
-./js/upload.js
-not check
-
-change img
+edit UI Folder click menu
 
 
 
