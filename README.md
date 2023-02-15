@@ -1,11 +1,5 @@
-# Google Drive Clone
-### Features
- - [x] Folder CRUD
- - [x] File Sharing
- - [x] Folder Sharing
- - [x] Multiple File Sharing
- - [x] Search File / Folder
- - [x] Create Folder
- - [x] Multiple File Delete
- - [x] Drag Drop Upload
- - [ ] Sub Folders
+# Google Drive Clone Web
+### Build by
+HTML, CSS, Javascript, Firebase, Google Script
+### Run
+Open the source folder by your host, index.html auto run.
