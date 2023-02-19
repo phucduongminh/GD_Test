@@ -62,9 +62,8 @@ body{
 }
 .card {
     width: 30% ;
-    height: 30%;
+    height: 130px;
     overflow-y: hidden;
-
 }
 .card video {
     height: 130px;
