@@ -53,7 +53,7 @@ function picture(size , date , key , title ,link , share ){
     var link2 = link.replace('https://drive.google.com/thumbnail?id=', "")
      link2 = link2.replace(/\s/g, '')
      link2 = 'https://drive.google.com/uc?export=download&id='+ link2
-    return ` <div   date="${date}" size="${size}" share=${share} class="card mr-4 ${key}" id="${key}" key="${key}" link="${btoa(link)}" title="${title}" style="width: 28%" onclick="dropDown(this)">
+    return ` <div   date="${date}" size="${size}" share=${share} class="card mr-4 ${key}" id="${key}" key="${key}" link="${btoa(link)}" title="${title}" style="width: 28%, height:auto;" onclick="dropDown(this)">
     <img class="card-img-top" src="${link}" loading="lazy" alt="Couldnt load">
     <div class="card-body">
     <h5 class="card-title mb-0 file" data-id="${key}"><i class="fas fa-image mr-4"></i>${title}</h5>  
@@ -62,9 +62,9 @@ function picture(size , date , key , title ,link , share ){
 </div>`
 }
 function filezip(size , date , key , title ,link , share ){
-    return `<div class="card mr-4 ${key}" size="${size}" date="${date}" share=${share} style="width:28%; height: auto" id="${key}" title="${title}" key="${key}" link="${btoa(link)}"  onclick="dropDown(this)">
+    return `<div class="card mr-4 ${key}" size="${size}" date="${date}" share=${share} style="width:28%; height: auto;" id="${key}" title="${title}" key="${key}" link="${btoa(link)}"  onclick="dropDown(this)">
     <div class="card-body">
-    <h5 class="card-title mb-0 file" data-id="${key}"> <i class="fas fa-file-archive mr-4"></i></i>${title}</h5> 
+    <h5 class="card-title mb-0 file" data-id="${key}"> <i class="fas fa-file mr-4" style="color: blue;"></i></i>${title}</h5> 
     <a href="${link}" class="btn btn-primary mt-2">Download</a>                          
     </div>`
 }
@@ -76,7 +76,7 @@ function filevideo(size , date , key , title ,link , share){
     <div class="card mr-4 ${key}" size="${size}" date="${date}" share=${share} style="width: 28%;" id="${key}" title="${title}" key="${key}" link="${btoa(link)}" onclick="dropDown(this)" >
     <video class="card-img-top" poster="${link}" src="${link2}" controls></video>
     <div class="card-body">
-    <h5 class="card-title mb-0 file" data-id="${key}"><i class="fas fa-image mr-4"></i>${title}</h5>   
+    <h5 class="card-title mb-0 file" data-id="${key}"><i class="fas fa-clapperboard mr-4" style="color: red;"></i>${title}</h5>   
     <a href="${link2}" class="btn btn-primary mt-2">Download</a>                              
     </div>
     `

@@ -18,7 +18,7 @@ function addFolder(id, title){
     var html;
     try{
         html = `   
-         <div class="card mr-4 p5 ${id}" data-long-press-delay="500" style="width: 21rem;height:6rem" data-id="${id}" onclick="folderClick(this)">
+         <div class="card mr-4 p5 ${id}" data-long-press-delay="500" style="width: 15rem;height: 15rem" data-id="${id}" onclick="folderClick(this)">
         <div class="card-body" data-id="${id}">
         <h5 class="card-title mb-0 folder" data-id="${id}"> <i class="fas fa-folder mr-4"></i>${title}</h5>
         </div>
@@ -37,7 +37,7 @@ function addPicture(title , link , key , date , share,size){
     link2 = `https://drive.google.com/thumbnail?id=`+link2;
    
     try{ html = `
-    <div   date="${date}" size="${size}" share=${share} class="card mr-4 ${key}" id="${key}" key="${key}" link="${btoa(link)}" title="${title}" style="width: 28%" onclick="dropDown(this)">
+    <div   date="${date}" size="${size}" share=${share} class="card mr-4 ${key}" id="${key}" key="${key}" link="${btoa(link)}" title="${title}" style="width: auto; height: 15rem;" onclick="dropDown(this)">
     <img class="card-img-top" src="${link2}" loading="lazy" alt="Couldnt load">
     <div class="card-body">
     <h5 class="card-title mb-0 file" data-id="${key}"><i class="fas fa-image mr-4"></i>${title}</h5>                           
@@ -64,9 +64,9 @@ jNotify.error('Error', 'Something went wrong while loading a file',{
 function zipfile(title , link ,  key , date , share , size){
     var html;
     try{ html = `
-    <div class="card mr-4 ${key}" size="${size}" date="${date}" share=${share} style="width:28%; height: 6rem" id="${key}" title="${title}" key="${key}" link="${btoa(link)}"  onclick="dropDown(this)">
+    <div class="card mr-4 ${key}" size="${size}" date="${date}" share=${share} style="width:28%; height: 15rem;" id="${key}" title="${title}" key="${key}" link="${btoa(link)}"  onclick="dropDown(this)">
     <div class="card-body">
-    <h5 class="card-title mb-0 file" data-id="${key}"> <i class="fas fa-file-archive mr-4"></i></i>${title}</h5>                           
+    <h5 class="card-title mb-0 file" data-id="${key}"> <i class="fas fa-file mr-4" style="color: blue;"></i></i>${title}</h5>                           
     </div>
     `
     if(folder == null){
@@ -85,10 +85,10 @@ function video(title , link , key , date , share, size){
     link2 = `https://www.googleapis.com/drive/v3/files/${id}?alt=media&key=AIzaSyCpdoMyef5cgIQ5EmcoPJLgsvkXl3uytqo`;
     var html;
     try{ html = `
-    <div class="card mr-4 ${key}" size="${size}" date="${date}" share=${share} style="width: 28%" id="${key}" title="${title}" key="${key}" link="${btoa(link)}" onclick="dropDown(this)" >
+    <div class="card mr-4 ${key}" size="${size}" date="${date}" share=${share} style="width: auto; height:15rem;" id="${key}" title="${title}" key="${key}" link="${btoa(link)}" onclick="dropDown(this)" >
     <video class="card-img-top" poster="https://drive.google.com/thumbnail?id=${id}" src="${btoa(link)}" controls></video>
     <div class="card-body">
-    <h5 class="card-title mb-0 file" data-id="${key}"><i class="fas fa-image mr-4"></i>${title}</h5>                           
+    <h5 class="card-title mb-0 file" data-id="${key}"><i class="fas fa-clapperboard mr-4" style="color: red;"></i>${title}</h5>                           
     </div>
     `
     if(folder == null){
@@ -352,7 +352,7 @@ function DeleteFolder(folder){
 function CopyFolderLink(folder){
     const key = folder.getAttribute('data-id');
     const param = `?folder=${btoa(key)}`
-    linkfile ='https://rawcdn.githack.com/phucduongminh/GG_Drive_Clone/a4e735af64c45114d0772297842e0eb650cd38d4/fileSharing/index.html' + param
+    linkfile ='https://rawcdn.githack.com/phucduongminh/GG_Drive_Clone/20faec19e577268b47591725e7f3b18cca960fe8/fileSharing/index.html' + param
     copytext(linkfile);
 }
 function RemoveFolderSharing(id){
