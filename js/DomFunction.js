@@ -8,7 +8,7 @@ function dropDown($){
     const dropdown = get('#right-sidebar')
     var linkfile;
    const param = `?key=${btoa(key)}`
-   linkfile ='https://raw.githack.com/phucduongminh/GD_Test/main/fileSharing/index.html' + param
+   linkfile ='https://raw.githack.com/phucduongminh/GG_Drive_Clone/main/fileSharing/index.html' + param
     dropdown.style.display = 'flex'
     get('#button-Delete').setAttribute("data-id", key);
     get('#date').textContent = date

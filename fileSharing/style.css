@@ -61,8 +61,8 @@ body{
     overflow-y: scroll;
 }
 .card {
-    width: 28% ;
-    height: auto;
+    width: 30% ;
+    height: 30%;
     overflow-y: hidden;
 
 }
