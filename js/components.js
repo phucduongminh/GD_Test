@@ -352,7 +352,7 @@ function DeleteFolder(folder){
 function CopyFolderLink(folder){
     const key = folder.getAttribute('data-id');
     const param = `?folder=${btoa(key)}`
-    linkfile ='https://rawcdn.githack.com/phucduongminh/GG_Drive_Clone/880f94c6682657215c51513740ceb894a40f751e/fileSharing/index.html' + param
+    linkfile ='https://rawcdn.githack.com/phucduongminh/GG_Drive_Clone/a4e735af64c45114d0772297842e0eb650cd38d4/fileSharing/index.html' + param
     copytext(linkfile);
 }
 function RemoveFolderSharing(id){
