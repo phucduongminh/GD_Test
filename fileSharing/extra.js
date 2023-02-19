@@ -73,7 +73,7 @@ function filevideo(size , date , key , title ,link , share){
     link2 = link2.replace(/\s/g, '')
     link2 = 'https://drive.google.com/uc?export=download&id='+ link2
     return `
-    <div class="card mr-4 ${key}" size="${size}" date="${date}" share=${share} style="width: 28%; height: auto" id="${key}" title="${title}" key="${key}" link="${btoa(link)}" onclick="dropDown(this)" >
+    <div class="card mr-4 ${key}" size="${size}" date="${date}" share=${share} style="width: 28%;" id="${key}" title="${title}" key="${key}" link="${btoa(link)}" onclick="dropDown(this)" >
     <video class="card-img-top" poster="${link}" src="${link2}" controls></video>
     <div class="card-body">
     <h5 class="card-title mb-0 file" data-id="${key}"><i class="fas fa-image mr-4"></i>${title}</h5>   
