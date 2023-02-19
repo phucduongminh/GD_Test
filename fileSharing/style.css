@@ -63,7 +63,15 @@ body{
 .card {
     width: 28% ;
     overflow-y: hidden;
+    height: 400px;
 }
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
 .card video {
     height: 130px;
 }
@@ -87,8 +95,8 @@ body{
     display: grid;
     place-items: center;
     border-radius:20px ;
-    width: 600px;
     height: 400px;
+    width: 600px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
