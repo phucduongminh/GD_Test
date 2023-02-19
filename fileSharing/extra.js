@@ -28,7 +28,7 @@ function video (vid_key , link2){
                  controls
                  preload="auto"
                  width="640"
-                 height="264"
+                 height="200"
                  poster="https://drive.google.com/thumbnail?id=${vid_key}"
                  data-setup="{}"
                  type="video/mp4"
@@ -76,7 +76,7 @@ function filevideo(size , date , key , title ,link , share){
     <div class="card mr-4 ${key}" size="${size}" date="${date}" share=${share} style="width: 28%;" id="${key}" title="${title}" key="${key}" link="${btoa(link)}" onclick="dropDown(this)" >
     <video class="card-img-top" poster="${link}" src="${link2}" controls></video>
     <div class="card-body">
-    <h5 class="card-title mb-0 file" data-id="${key}"><i class="fas fa-clapperboard mr-4" style="color: red;"></i>${title}</h5>   
+    <h5 class="card-title mb-0 file" data-id="${key}"><i class="fas fa-clapperboard mr-4" style="color: red;"></i>${title}</h5>
     <a href="${link2}" class="btn btn-primary mt-2">Download</a>                              
     </div>
     `
