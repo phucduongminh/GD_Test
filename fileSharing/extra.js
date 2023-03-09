@@ -63,7 +63,7 @@ function picture(size , date , key , title ,link , share ){
 }
 function filezip(size , date , key , title ,link , share ){
     return `<div class="card mr-4 ${key}" size="${size}" date="${date}" share=${share} style="width:28%; height: 400px;" id="${key}" title="${title}" key="${key}" link="${btoa(link)}"  onclick="dropDown(this)">
-    <div class="card-body">
+    <div class="card-body" style="padding-top: 200px;">
     <h5 class="card-title mb-0 file" data-id="${key}"> <i class="fas fa-file mr-4" style="color: blue;"></i></i>${title}</h5> 
     <a href="${link}" class="btn btn-primary mt-2">Download</a>                          
     </div>`
